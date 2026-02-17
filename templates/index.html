@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scientific Calculator</title>
+</head>
+<body>
+    <h2>Scientific Calculator</h2>
+    <form method="POST">
+        <input type="number" step="any" name="num1" required>
+        <input type="number" step="any" name="num2" required>
+
+        <select name="operation">
+            <option value="add">+</option>
+            <option value="sub">-</option>
+            <option value="mul">*</option>
+            <option value="div">/</option>
+            <option value="pow">Power</option>
+        </select>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result is not none %}
+        <h3>Result: {{ result }}</h3>
+    {% endif %}
+</body>
+</html>
